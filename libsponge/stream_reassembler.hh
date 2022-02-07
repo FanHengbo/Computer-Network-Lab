@@ -5,15 +5,28 @@
 
 #include <cstdint>
 #include <string>
-
+#include <set>
+using namespace std;
+struct Block
+{
+	size_t begin = 0;
+	size_t end = 0;
+	size_t index = 0;
+	string data = "";
+	
+	Block () = default;
+	Block(size_t b, size_t e, size_t i, string d): begin(b), end(e), index(i), data(d){};
+	bool operator<(const Block& A) const {	return index < A.index;	 }
+};
 //! \brief A class that assembles a series of excerpts from a byte stream (possibly out of order,
 //! possibly overlapping) into an in-order byte stream.
 class StreamReassembler {
   private:
     // Your code here -- add private members as necessary.
-
+	std::set<Block> _streamBuffer = {}; 
+	size_t _expectedIndex = 0;
     ByteStream _output;  //!< The reassembled in-order byte stream
-    size_t _capacity;    //!< The maximum number of bytes
+    size_t _capacity = 0;    //!< The maximum number of bytes
 
   public:
     //! \brief Construct a `StreamReassembler` that will store up to `capacity` bytes.
