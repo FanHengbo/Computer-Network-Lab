@@ -24,11 +24,11 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
 	if (_expectedIndex == index)	//No need to store into the streamBuffer
 	{
 		std::set<Block>::iterator itlow = _streamBuffer.lower_bound(receivedSegment);
-		if(receivedSegment.end + 1 == *itlow.begin)
+		if(receivedSegment.end + 1 == (*itlow).begin)
 		{
-			receivedSegment.end = *itlow.end;
-			receivedSegment.data += *itlow.data;
-			segmentLength += *itlow.data.length();
+			receivedSegment.end = (*itlow).end;
+			receivedSegment.data += (*itlow).data;
+			segmentLength += (*itlow).data.length();
 			_streamBuffer.erase(itlow);
 		}
 		written = _output.write(receivedSegment.data);
@@ -44,76 +44,79 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
 		}
 		
 		Block receivedSegment(index, index+segmentLength-1, segmentLength, data);
-		receivedSegment.data.erase(segmentLength, data.length()) //change the length of segment to fit
-		std::pair<std::set<Block>::iterator, bool> ret;
+		receivedSegment.data.erase(segmentLength, data.length()); //change the length of segment to fit
+		std::pair<set<Block>::iterator, bool> ret;
 		ret = _streamBuffer.insert(receivedSegment);
 		if (ret.second == false) //overlapping substring
 		{
 			return;
 		}
 		std::set<Block>::iterator it = ret.first;
+		std::set<Block>::iterator itprev = prev(it, 1);
+		std::set<Block>::iterator itnext = next(it, 1);
+		Block mergeSegment;
 		if (it == _streamBuffer.begin())
 		{
-			std::set<Block>::iterator itnext = it+1;
-			if(*it.end >= *itnext.begin)	//overlapping substring
+			if((*it).end >= (*itnext).begin)	//overlapping substring
 			{
 				_streamBuffer.erase(it);
 				return;
 			}
-			if(*it.end + 1 == *itnext.begin) //Merge
+			if((*it).end + 1 == (*itnext).begin) //Merge
 			{
-				*it.end = *itnext.end;
-				*it.data += *itnext.data;
-				*it.length += *itnext.length;
+				mergeSegment = (*it);
+				Merge(mergeSegment, *itnext);
+				_streamBuffer.erase(it);
 				_streamBuffer.erase(itnext);
+				_streamBuffer.insert(mergeSegment);
 			}
 			
 		}
 		else if (it == _streamBuffer.end())
 		{
-			std::set<Block>::iterator itprev = it-1;
-			if (*itprev.end >= *it.begin)	//overlapping substring
+			if ((*itprev).end >= (*it).begin)	//overlapping substring
 			{
 				_streamBuffer.erase(it);
 				return;
 			}
-			if (*itprev.end + 1 == *it.begin)
+			if ((*itprev).end + 1 == (*it).begin)
 			{
-				*itprev.end = *it.end;
-				*itprev.data += *it.data;
-				*itprev.length += *it.length;
+				mergeSegment = (*itprev);
+				Merge(mergeSegment, *it);
 				_streamBuffer.erase(it);
+				_streamBuffer.erase(itprev);
+				_streamBuffer.insert(mergeSegment);
 			}
 		}
 		else
 		{
-			std::set<Block>::iterator itprev = it-1;
-			std::set<Block>::iterator itnext = it+1;
-			if (*itprev.end >= *it.begin || *it.end >= *itnext.begin)	//overlapping substring
+			
+			if ((*itprev).end >= (*it).begin || (*it).end >= (*itnext).begin)	//overlapping substring
 			{
 				_streamBuffer.erase(it);
 				return;
 			}
-			else if (*itprev.end + 1 == *it.begin)
+			else if ((*itprev).end + 1 == (*it).begin)
 			{
-				*itprev.end = *it.end;
-				*itprev.data += *it.data;
-				*itprev.length += *it.length;
-				if (*it.end + 1 == *itnext.begin)	//perfectly fill the gap
+				mergeSegment = (*itprev);
+				Merge(mergeSegment, *it);
+				_streamBuffer.erase(itprev);
+				
+				if ((*it).end + 1 == (*itnext).begin)	//perfectly fill the gap
 				{
-					*itprev.end = *itnext.end;
-					*itprev.data += *itnext.data;
-					*itprev.length += *itnext.length;
+					Merge(mergeSegment, *itnext);
 					_streamBuffer.erase(itnext);
 				}
 				_streamBuffer.erase(it);
+				_streamBuffer.insert(mergeSegment);
 			}
-			else if (*it.end + 1 == *itnext.begin)
+			else if ((*it).end + 1 == (*itnext).begin)
 			{
-				*it.end = *itnext.end;
-				*it.data += *itnext.data;
-				*it.length += *itnext.length;
+				mergeSegment = (*it);
+				Merge(mergeSegment, *itnext);
+				_streamBuffer.erase(it);
 				_streamBuffer.erase(itnext);
+				_streamBuffer.insert(mergeSegment);
 			}
 		}
 			
@@ -132,4 +135,11 @@ size_t StreamReassembler::unassembled_bytes() const
 	return unassembledByteLength; 
 }
 
-bool StreamReassembler::empty() const { return {}; }
+bool StreamReassembler::empty() const { return !_streamBuffer.size(); }
+
+void Merge(Block &e1, const Block &e2)
+{
+	e1.end = e2.end;
+	e1.data += e2.data;
+	e1.length += e2.length;
+}
