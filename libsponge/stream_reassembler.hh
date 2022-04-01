@@ -9,15 +9,17 @@
 using namespace std;
 struct Block
 {
-	size_t begin = 0;
-	size_t end = 0;
-	size_t length = 0;
-	string data = "";
+	size_t _begin = 0;
+	size_t _end = 0;
+	size_t _length = 0;
+	string _data = "";
 	
 	Block () = default;
-	Block(size_t b, size_t e, size_t i, string d): begin(b), end(e), length(i), data(d){};
-	bool operator<(const Block& A) const {	return begin < A.begin;	 }
+	Block(size_t b, size_t e, size_t i, string d): _begin(b), _end(e), _length(i), _data(d){};
+  Block(const Block &b): _begin(b._begin), _end(b._end), _length(b._length), _data(b._data){};
+	bool operator<(const Block& A) const {	return _begin < A._begin;	 }
 };
+
 //! \brief A class that assembles a series of excerpts from a byte stream (possibly out of order,
 //! possibly overlapping) into an in-order byte stream.
 class StreamReassembler {
@@ -27,7 +29,7 @@ class StreamReassembler {
 	size_t _expectedIndex = 0;
     ByteStream _output;  //!< The reassembled in-order byte stream
     size_t _capacity = 0;    //!< The maximum number of bytes
-
+    bool _eof_flag = false;
   public:
     //! \brief Construct a `StreamReassembler` that will store up to `capacity` bytes.
     //! \note This capacity limits both the bytes that have been reassembled,
@@ -59,6 +61,8 @@ class StreamReassembler {
     //! \brief Is the internal state empty (other than the output stream)?
     //! \returns `true` if no substrings are waiting to be assembled
     bool empty() const;
+    void Merge(Block &b1, set<Block>::iterator prev, set<Block>::iterator next);
+    void check_eof();
 };
 
 #endif  // SPONGE_LIBSPONGE_STREAM_REASSEMBLER_HH

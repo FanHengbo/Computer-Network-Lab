@@ -48,7 +48,7 @@ string ByteStream::peek_output(const size_t len) const {
 //! \param[in] len bytes will be removed from the output side of the buffer
 void ByteStream::pop_output(const size_t len) {
 	size_t  length = len;
-	if (len > q.size())
+	if (length > q.size())
 		length = q.size();
 	Read += length;
 	for (size_t i = 0 ;i < length;i++)
@@ -62,10 +62,10 @@ void ByteStream::pop_output(const size_t len) {
 //! \returns a string
 std::string ByteStream::read(const size_t len) {
     size_t  length = len;
-	if (len > q.size())
+	if (length > q.size())
 		length = q.size();
 	string output = "";
-	while(length--)
+	for (size_t i = 0 ;i < length;i++)
 	{
 		output += q[0];
 		q.pop_front();
