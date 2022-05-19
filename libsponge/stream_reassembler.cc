@@ -18,153 +18,174 @@ StreamReassembler::StreamReassembler(const size_t capacity) : _output(capacity),
 //! possibly out-of-order, from the logical stream, and assembles any newly
 //! contiguous substrings and writes them into the output stream in order.
 void StreamReassembler::push_substring(const string &data, const size_t index, const bool eof) {
-	size_t segmentLength = data.length();
-	_eof_flag = eof;
-	if (segmentLength == 0)
+	/*
+	传入数据之后存在以下几种可能性:
+	1. _expectedIndex >= index && index + data.length > _expectedIndex
+		此时需要将后面重复的数据去掉之后直接送进output,不需要往buffer中插入
+	2. _expectedIndex < index
+		此时需要将数据插入到buffer以便进行装配,
+		(1).使用lowerbound函数获取对应的位置itlow, 返回的迭代器存在多种状态需要进行讨论
+			a.	itlow->index <= index
+				aa.	newblock.end > itlow->end
+					去掉前半部分重复的字符串, 插入
+				bb.	else
+					丢弃, 因为完全重复了
+			b. itlow == begin
+				新插入的这个segment的index是最小的
+		(2).使用upperbound函数获取对应的位置itup, 返回的迭代器存在多种状态需要进行讨论
+			a.	itup->index > index
+				aa.	newblock.end > itup->index
+					去掉后半部分重复的字符串, 插入
+				bb.	else
+					说明后半部分没有重合
+			b. itlow == end
+				新插入的这个segment的index是最大的
+	
+	能否尽可能延迟插入的操作
+
+	*/
+	if (_expectedIndex + _capacity <= index)
+	{
+		return; //Segment过长了
+	}
+
+	if (eof)
+	{
+		_eof_flag = eof;
+	}
+	if (data.length() == 0)
 	{
 		check_eof();
 		return;
 	}
-	Block receivedSegment(index, index+segmentLength-1, segmentLength, data);
-	size_t written;
-	
-	if (_expectedIndex >= index)	//No need to store into the streamBuffer
+
+	Block receivedSegment = {index, index+data.length()-1, data.length(), data};
+	if (index + data.length() <= _expectedIndex)	//完全重复
 	{
-		if (_expectedIndex > index)
+		check_eof();
+		return;
+	}
+	else if (index < _expectedIndex)
+	{
+		size_t duplicateLength = _expectedIndex - index;
+		receivedSegment._begin = _expectedIndex;
+		receivedSegment._data.assign(data.begin()+duplicateLength, data.end());
+		receivedSegment._length = receivedSegment._data.length();
+	}
+	
+	_unassembledBytes += receivedSegment._length;
+
+	auto itlow = _streamBuffer.lower_bound(receivedSegment);
+	long mergedBytes = 0;
+
+	while (itlow != _streamBuffer.end() && (mergedBytes = Merge(receivedSegment, *itlow)) >= 0)
+	{
+		_unassembledBytes -= mergedBytes;
+		_streamBuffer.erase(itlow);
+		itlow = _streamBuffer.lower_bound(receivedSegment);
+	}
+	if (itlow != _streamBuffer.begin())
+	{
+		itlow--;
+		while((mergedBytes = Merge(receivedSegment, *itlow)) >= 0)
 		{
-			if (_expectedIndex < index + segmentLength)
-				receivedSegment._data.erase(receivedSegment._data.begin(), receivedSegment._data.begin()+_expectedIndex - index);
-			else
-			{
-				check_eof();
-				return;
-			}
-		}	
-		if (!empty())
-		{
-			std::set<Block>::iterator itlow = _streamBuffer.begin();
-			if (receivedSegment._end + 1 == itlow->_begin)
-			{
-				receivedSegment._data += itlow->_data;
-				_streamBuffer.erase(itlow);
-			}
-			else if(receivedSegment._end >= (*itlow)._begin)
-			{
-				string temp = itlow->_data;
-				temp.erase(temp.begin(), temp.begin()+receivedSegment._end+1 - itlow->_begin);
-				receivedSegment._data += temp;
-				_streamBuffer.erase(itlow);
-			}
+			_unassembledBytes -= mergedBytes;
+			_streamBuffer.erase(itlow);
+			itlow = _streamBuffer.lower_bound(receivedSegment);
+			if (itlow == _streamBuffer.begin())
+				break;
+			itlow--;
 		}
+	}
+	
+
+
+
+	//尝试往_output中写
+	size_t written;
+	if (_expectedIndex == receivedSegment._begin)
+	{
 		written = _output.write(receivedSegment._data);
 		_expectedIndex += written;
-	}
-	else	//Put unassembled string into set
-	{
-		if (empty())
+		_unassembledBytes -= written;
+		if (written < receivedSegment._length) //_output现在满了，修改数据准备把它们存起来
 		{
+			receivedSegment._begin += written;
+			receivedSegment._data.assign(receivedSegment._data.begin()+written, receivedSegment._data.end());
+			receivedSegment._length = receivedSegment._data.length();
 			_streamBuffer.insert(receivedSegment);
+			_unassembledBytes += (receivedSegment._length);
 			return;
 		}
-		Block truncatedSegment = {index, index+segmentLength-1, segmentLength, data};
-		size_t unassembledByteLength = unassembled_bytes();
-		if (segmentLength > _capacity - unassembledByteLength)
+		else
 		{
-			segmentLength = _capacity - unassembledByteLength;
-			truncatedSegment._data.erase(truncatedSegment._data.begin()+segmentLength, truncatedSegment._data.end()); //change the length of segment to fit
-			truncatedSegment._length = segmentLength;
-			truncatedSegment._end = truncatedSegment._begin + segmentLength - 1;
+			
+			check_eof();
+			return;
 		}
-		std::set<Block>::iterator itlow = _streamBuffer.lower_bound(truncatedSegment);
-		std::set<Block>::iterator itprev = prev(itlow, 1);
-		std::set<Block>::iterator itnext = next(itlow, 1);
-		if (itlow == _streamBuffer.end())
-		{
-			_streamBuffer.insert(truncatedSegment);
-		}
-		else if (itlow->_begin == truncatedSegment._begin)	//Overlap substring
-		{
-			if (itlow->_length < truncatedSegment._length)	//need update
-			{
-				if (_streamBuffer.size() == 1 || itnext == itlow) //Only one element
-				{
-					_streamBuffer.erase(itlow);
-					_streamBuffer.insert(truncatedSegment);
-				}
-				else if (itprev == itlow)
-				{
-					_streamBuffer.erase(itlow);
-					if (truncatedSegment._end >= itnext->_begin)
-					{
-						string temp;
-						temp = itnext->_data;
-						temp.erase(temp.begin(), temp.begin()+truncatedSegment._end+1-itnext->_begin);
-						truncatedSegment._data += temp;
-						truncatedSegment._end = itnext->_end;
-						truncatedSegment._length = truncatedSegment._data.length();
-					}
-					_streamBuffer.insert(truncatedSegment);
-				}
-				else
-				{
-					Merge(truncatedSegment, itprev, itnext);
-				}
-				
-			}
-		}
-		else if (itlow->_begin > truncatedSegment._begin)
-		{
-			Merge(truncatedSegment, itprev, itlow);
-		}
-	}	
-	check_eof();
 
+	}
+	_streamBuffer.insert(receivedSegment);
+
+	
 }
 
 
 size_t StreamReassembler::unassembled_bytes() const 
 { 
-	size_t unassembledByteLength = 0;
-	for (set<Block>::iterator it = _streamBuffer.begin(); it != _streamBuffer.end(); ++it)
-	{
-		unassembledByteLength += (*it)._length;
-	}
-	return unassembledByteLength; 
+	return _unassembledBytes; 
 }
 
 bool StreamReassembler::empty() const { return (_streamBuffer.empty()); }
 
-void StreamReassembler::Merge(Block &b1, set<Block>::iterator prev, set<Block>::iterator next)
+long StreamReassembler::Merge(Block &b1, const Block &b2)
 {
-	string temp;
-
-	if (b1._end >= next->_begin)
+	Block a, c;
+	if (b1._begin > b2._begin)
 	{
-		temp = next->_data;
-		temp.erase(temp.begin(), temp.begin()+b1._end +1 - next->_begin);
-		b1._data += temp;
-		b1._end = next->_end;
-		b1._length = b1._data.length();
-		_streamBuffer.erase(next);
+		a = b2;
+		c = b1;
 	}
-	if (prev->_end >= b1._begin && _streamBuffer.size()) //To detect whether there's only one element in the set
+	else
 	{
-		temp = prev->_data;
-		b1._data.erase(b1._data.begin(), b1._data.begin()+prev->_end + 1 -b1._begin);
-		temp += b1._data;
-		b1._data = temp;
-		b1._begin = prev->_begin;
-		b1._length = b1._data.length();
-		_streamBuffer.erase(prev);
+		a = b1;
+		c = b2;
+	} 	
+	if (a._end < c._begin)		//没有重叠的部分
+	{
+		if (a._end + 1 == c._begin)
+		{
+			a._data += c._data;
+			a._end = c._end;
+			a._length = a._data.length();
+			b1 = a;
+			return 0;
+		}
+		else
+			return -1;
 	}
-	_streamBuffer.insert(b1);
+	else if(a._end >= c._end)	//其中一个segment是另外一个segment的片段
+	{
+		b1 = a;
+		return c._length;
+	}
+	else
+	{
+		string temp;
+		size_t offset = a._end - c._begin + 1;
+		temp.assign(c._data.begin()+offset, c._data.end());
+		a._data += temp;
+		a._end = c._end;
+		a._length = a._data.length();
+		b1 = a;
+		return offset;
+	}
 }
 void StreamReassembler::check_eof()
 {
-	if (_eof_flag == true)
+	if (_eof_flag == true && empty())
 	{
-		if (empty())
-			_output.end_input();
+		_output.end_input();
 	}
 
 }

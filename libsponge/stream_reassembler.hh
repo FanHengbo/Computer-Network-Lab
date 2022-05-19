@@ -25,11 +25,12 @@ struct Block
 class StreamReassembler {
   private:
     // Your code here -- add private members as necessary.
-	std::set<Block> _streamBuffer = {}; 
-	size_t _expectedIndex = 0;
+	  std::set<Block> _streamBuffer = {}; 
+	  size_t _expectedIndex = 0;
     ByteStream _output;  //!< The reassembled in-order byte stream
     size_t _capacity = 0;    //!< The maximum number of bytes
     bool _eof_flag = false;
+    size_t _unassembledBytes = 0;
   public:
     //! \brief Construct a `StreamReassembler` that will store up to `capacity` bytes.
     //! \note This capacity limits both the bytes that have been reassembled,
@@ -61,7 +62,7 @@ class StreamReassembler {
     //! \brief Is the internal state empty (other than the output stream)?
     //! \returns `true` if no substrings are waiting to be assembled
     bool empty() const;
-    void Merge(Block &b1, set<Block>::iterator prev, set<Block>::iterator next);
+    long Merge(Block &b1, const Block &b2);
     void check_eof();
 };
 

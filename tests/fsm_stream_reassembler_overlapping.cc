@@ -10,6 +10,26 @@ using namespace std;
 
 int main() {
     try {
+
+         {
+            const size_t cap = {1000};
+            ReassemblerTestHarness test{cap};
+
+            test.execute(SubmitSegment{"bcd", 1});
+            test.execute(SubmitSegment{"c", 2});
+
+            test.execute(BytesAvailable(""));
+            test.execute(BytesAssembled(0));
+            test.execute(UnassembledBytes(3));
+
+            test.execute(SubmitSegment{"a", 0});
+            test.execute(BytesAvailable("abcd"));
+            test.execute(BytesAssembled(4));
+            test.execute(UnassembledBytes(0));
+        }
+
+
+
         {
             // Overlapping assembled (unread) section
             const size_t cap = {1000};
