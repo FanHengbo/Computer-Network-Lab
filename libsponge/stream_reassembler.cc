@@ -98,9 +98,6 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
 		}
 	}
 	
-
-
-
 	//尝试往_output中写
 	size_t written;
 	if (_expectedIndex == receivedSegment._begin)
