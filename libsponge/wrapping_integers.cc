@@ -40,12 +40,12 @@ uint64_t unwrap(WrappingInt32 n, WrappingInt32 isn, uint64_t checkpoint) {
         if (absoluteSeq < checkpoint && checkpoint - absoluteSeq > INT32_MAX)
         {
             //尽管已经提取出了checkpoint的高32位，但是差还是大于INT32_MAX，说明需要再往上取
-            high += 1;
+            high++;
         }
         else if (absoluteSeq > checkpoint && absoluteSeq - checkpoint > INT32_MAX)
         {
             //取过头了，往下舍去
-            high -= 1;
+            high--;
         }
         absoluteSeq = (high << 32) + offset;
     }
@@ -54,7 +54,7 @@ uint64_t unwrap(WrappingInt32 n, WrappingInt32 isn, uint64_t checkpoint) {
         absoluteSeq = offset;
         if (absoluteSeq < checkpoint && checkpoint - absoluteSeq > INT32_MAX)
         {
-            high += 1;
+            high++;
             absoluteSeq = (high << 32) + offset;
         }
     }

@@ -15,10 +15,10 @@ t_strm_reassem_many 11 0.0124309
 t_strm_reassem_overlapping 2 0.00229907
 t_strm_reassem_win 11 0.0123897
 t_strm_reassem_cap 17 0.004482
-t_wrapping_ints_cmp 18 0.000317666
-t_wrapping_ints_unwrap 7 0.00186171
-t_wrapping_ints_wrap 16 0.000391632
-t_wrapping_ints_roundtrip 5 0.0356438
+t_wrapping_ints_cmp 19 0.000166153
+t_wrapping_ints_unwrap 8 0.000575632
+t_wrapping_ints_wrap 17 0.000200538
+t_wrapping_ints_roundtrip 6 0.02885
 t_recv_connect 0 0
 t_recv_transmit 0 0
 t_recv_window 0 0

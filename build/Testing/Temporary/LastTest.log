@@ -1,17 +1,17 @@
-Start testing: May 19 21:29 PDT
+Start testing: May 19 22:06 PDT
 ----------------------------------------------------------
 1/169 Testing: t_wrapping_ints_cmp
 1/169 Test: t_wrapping_ints_cmp
 Command: "/home/cs144/sponge/build/tests/wrapping_integers_cmp"
 Directory: /home/cs144/sponge/build
-"t_wrapping_ints_cmp" start time: May 19 21:29 PDT
+"t_wrapping_ints_cmp" start time: May 19 22:06 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_wrapping_ints_cmp" end time: May 19 21:29 PDT
+"t_wrapping_ints_cmp" end time: May 19 22:06 PDT
 "t_wrapping_ints_cmp" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -19,14 +19,14 @@ Test Passed.
 2/169 Test: t_wrapping_ints_unwrap
 Command: "/home/cs144/sponge/build/tests/wrapping_integers_unwrap"
 Directory: /home/cs144/sponge/build
-"t_wrapping_ints_unwrap" start time: May 19 21:29 PDT
+"t_wrapping_ints_unwrap" start time: May 19 22:06 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_wrapping_ints_unwrap" end time: May 19 21:29 PDT
+"t_wrapping_ints_unwrap" end time: May 19 22:06 PDT
 "t_wrapping_ints_unwrap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -34,14 +34,14 @@ Test Passed.
 3/169 Test: t_wrapping_ints_wrap
 Command: "/home/cs144/sponge/build/tests/wrapping_integers_wrap"
 Directory: /home/cs144/sponge/build
-"t_wrapping_ints_wrap" start time: May 19 21:29 PDT
+"t_wrapping_ints_wrap" start time: May 19 22:06 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_wrapping_ints_wrap" end time: May 19 21:29 PDT
+"t_wrapping_ints_wrap" end time: May 19 22:06 PDT
 "t_wrapping_ints_wrap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -49,15 +49,15 @@ Test Passed.
 4/169 Test: t_wrapping_ints_roundtrip
 Command: "/home/cs144/sponge/build/tests/wrapping_integers_roundtrip"
 Directory: /home/cs144/sponge/build
-"t_wrapping_ints_roundtrip" start time: May 19 21:29 PDT
+"t_wrapping_ints_roundtrip" start time: May 19 22:06 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.18 sec
+Test time =   0.17 sec
 ----------------------------------------------------------
 Test Passed.
-"t_wrapping_ints_roundtrip" end time: May 19 21:29 PDT
+"t_wrapping_ints_roundtrip" end time: May 19 22:06 PDT
 "t_wrapping_ints_roundtrip" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 19 21:29 PDT
+End testing: May 19 22:06 PDT
