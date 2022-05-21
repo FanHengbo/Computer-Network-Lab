@@ -18,6 +18,7 @@ struct Block
 	Block(size_t b, size_t e, size_t i, string d): _begin(b), _end(e), _length(i), _data(d){};
   Block(const Block &b): _begin(b._begin), _end(b._end), _length(b._length), _data(b._data){};
 	bool operator<(const Block& A) const {	return _begin < A._begin;	 }
+
 };
 
 //! \brief A class that assembles a series of excerpts from a byte stream (possibly out of order,
@@ -46,7 +47,7 @@ class StreamReassembler {
     //! \param index indicates the index (place in sequence) of the first byte in `data`
     //! \param eof the last byte of `data` will be the last byte in the entire stream
     void push_substring(const std::string &data, const uint64_t index, const bool eof);
-
+    size_t get_expected_index() const { return _expectedIndex; }
     //! \name Access the reassembled byte stream
     //!@{
     const ByteStream &stream_out() const { return _output; }
@@ -58,12 +59,14 @@ class StreamReassembler {
     //! \note If the byte at a particular index has been pushed more than once, it
     //! should only be counted once for the purpose of this function.
     size_t unassembled_bytes() const;
+    size_t unread_bytes() const { return _output.buffer_size(); }
 
     //! \brief Is the internal state empty (other than the output stream)?
     //! \returns `true` if no substrings are waiting to be assembled
     bool empty() const;
     long Merge(Block &b1, const Block &b2);
     void check_eof();
+    bool output_ended() const { return _output.input_ended(); }
 };
 
 #endif  // SPONGE_LIBSPONGE_STREAM_REASSEMBLER_HH

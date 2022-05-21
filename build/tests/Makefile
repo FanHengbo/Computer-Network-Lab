@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/cs144/sponge/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -77,6 +66,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -122,36 +122,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-tests/CMakeFiles/recv_special.dir/rule:
-	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/recv_special.dir/rule
-.PHONY : tests/CMakeFiles/recv_special.dir/rule
-
-# Convenience name for target.
-recv_special: tests/CMakeFiles/recv_special.dir/rule
-
-.PHONY : recv_special
-
-# fast build rule for target.
-recv_special/fast:
-	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/recv_special.dir/build.make tests/CMakeFiles/recv_special.dir/build
-.PHONY : recv_special/fast
-
-# Convenience name for target.
-tests/CMakeFiles/recv_reorder.dir/rule:
-	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/recv_reorder.dir/rule
-.PHONY : tests/CMakeFiles/recv_reorder.dir/rule
-
-# Convenience name for target.
-recv_reorder: tests/CMakeFiles/recv_reorder.dir/rule
-
-.PHONY : recv_reorder
-
-# fast build rule for target.
-recv_reorder/fast:
-	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/recv_reorder.dir/build.make tests/CMakeFiles/recv_reorder.dir/build
-.PHONY : recv_reorder/fast
-
-# Convenience name for target.
 tests/CMakeFiles/recv_close.dir/rule:
 	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/recv_close.dir/rule
 .PHONY : tests/CMakeFiles/recv_close.dir/rule
@@ -165,21 +135,6 @@ recv_close: tests/CMakeFiles/recv_close.dir/rule
 recv_close/fast:
 	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/recv_close.dir/build.make tests/CMakeFiles/recv_close.dir/build
 .PHONY : recv_close/fast
-
-# Convenience name for target.
-tests/CMakeFiles/recv_window.dir/rule:
-	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/recv_window.dir/rule
-.PHONY : tests/CMakeFiles/recv_window.dir/rule
-
-# Convenience name for target.
-recv_window: tests/CMakeFiles/recv_window.dir/rule
-
-.PHONY : recv_window
-
-# fast build rule for target.
-recv_window/fast:
-	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/recv_window.dir/build.make tests/CMakeFiles/recv_window.dir/build
-.PHONY : recv_window/fast
 
 # Convenience name for target.
 tests/CMakeFiles/recv_transmit.dir/rule:
@@ -212,19 +167,19 @@ recv_connect/fast:
 .PHONY : recv_connect/fast
 
 # Convenience name for target.
-tests/CMakeFiles/wrapping_integers_roundtrip.dir/rule:
-	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/wrapping_integers_roundtrip.dir/rule
-.PHONY : tests/CMakeFiles/wrapping_integers_roundtrip.dir/rule
+tests/CMakeFiles/wrapping_integers_wrap.dir/rule:
+	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/wrapping_integers_wrap.dir/rule
+.PHONY : tests/CMakeFiles/wrapping_integers_wrap.dir/rule
 
 # Convenience name for target.
-wrapping_integers_roundtrip: tests/CMakeFiles/wrapping_integers_roundtrip.dir/rule
+wrapping_integers_wrap: tests/CMakeFiles/wrapping_integers_wrap.dir/rule
 
-.PHONY : wrapping_integers_roundtrip
+.PHONY : wrapping_integers_wrap
 
 # fast build rule for target.
-wrapping_integers_roundtrip/fast:
-	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/wrapping_integers_roundtrip.dir/build.make tests/CMakeFiles/wrapping_integers_roundtrip.dir/build
-.PHONY : wrapping_integers_roundtrip/fast
+wrapping_integers_wrap/fast:
+	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/wrapping_integers_wrap.dir/build.make tests/CMakeFiles/wrapping_integers_wrap.dir/build
+.PHONY : wrapping_integers_wrap/fast
 
 # Convenience name for target.
 tests/CMakeFiles/wrapping_integers_unwrap.dir/rule:
@@ -242,36 +197,6 @@ wrapping_integers_unwrap/fast:
 .PHONY : wrapping_integers_unwrap/fast
 
 # Convenience name for target.
-tests/CMakeFiles/fsm_stream_reassembler_seq.dir/rule:
-	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_seq.dir/rule
-.PHONY : tests/CMakeFiles/fsm_stream_reassembler_seq.dir/rule
-
-# Convenience name for target.
-fsm_stream_reassembler_seq: tests/CMakeFiles/fsm_stream_reassembler_seq.dir/rule
-
-.PHONY : fsm_stream_reassembler_seq
-
-# fast build rule for target.
-fsm_stream_reassembler_seq/fast:
-	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_seq.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_seq.dir/build
-.PHONY : fsm_stream_reassembler_seq/fast
-
-# Convenience name for target.
-tests/CMakeFiles/fsm_stream_reassembler_single.dir/rule:
-	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_single.dir/rule
-.PHONY : tests/CMakeFiles/fsm_stream_reassembler_single.dir/rule
-
-# Convenience name for target.
-fsm_stream_reassembler_single: tests/CMakeFiles/fsm_stream_reassembler_single.dir/rule
-
-.PHONY : fsm_stream_reassembler_single
-
-# fast build rule for target.
-fsm_stream_reassembler_single/fast:
-	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_single.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_single.dir/build
-.PHONY : fsm_stream_reassembler_single/fast
-
-# Convenience name for target.
 tests/CMakeFiles/wrapping_integers_cmp.dir/rule:
 	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/wrapping_integers_cmp.dir/rule
 .PHONY : tests/CMakeFiles/wrapping_integers_cmp.dir/rule
@@ -287,94 +212,19 @@ wrapping_integers_cmp/fast:
 .PHONY : wrapping_integers_cmp/fast
 
 # Convenience name for target.
-tests/CMakeFiles/fsm_stream_reassembler_holes.dir/rule:
-	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_holes.dir/rule
-.PHONY : tests/CMakeFiles/fsm_stream_reassembler_holes.dir/rule
+tests/CMakeFiles/byte_stream_capacity.dir/rule:
+	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/byte_stream_capacity.dir/rule
+.PHONY : tests/CMakeFiles/byte_stream_capacity.dir/rule
 
 # Convenience name for target.
-fsm_stream_reassembler_holes: tests/CMakeFiles/fsm_stream_reassembler_holes.dir/rule
+byte_stream_capacity: tests/CMakeFiles/byte_stream_capacity.dir/rule
 
-.PHONY : fsm_stream_reassembler_holes
+.PHONY : byte_stream_capacity
 
 # fast build rule for target.
-fsm_stream_reassembler_holes/fast:
-	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_holes.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_holes.dir/build
-.PHONY : fsm_stream_reassembler_holes/fast
-
-# Convenience name for target.
-tests/CMakeFiles/tcp_parser.dir/rule:
-	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/tcp_parser.dir/rule
-.PHONY : tests/CMakeFiles/tcp_parser.dir/rule
-
-# Convenience name for target.
-tcp_parser: tests/CMakeFiles/tcp_parser.dir/rule
-
-.PHONY : tcp_parser
-
-# fast build rule for target.
-tcp_parser/fast:
-	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/tcp_parser.dir/build.make tests/CMakeFiles/tcp_parser.dir/build
-.PHONY : tcp_parser/fast
-
-# Convenience name for target.
-tests/CMakeFiles/fsm_stream_reassembler_dup.dir/rule:
-	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_dup.dir/rule
-.PHONY : tests/CMakeFiles/fsm_stream_reassembler_dup.dir/rule
-
-# Convenience name for target.
-fsm_stream_reassembler_dup: tests/CMakeFiles/fsm_stream_reassembler_dup.dir/rule
-
-.PHONY : fsm_stream_reassembler_dup
-
-# fast build rule for target.
-fsm_stream_reassembler_dup/fast:
-	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_dup.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_dup.dir/build
-.PHONY : fsm_stream_reassembler_dup/fast
-
-# Convenience name for target.
-tests/CMakeFiles/byte_stream_construction.dir/rule:
-	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/byte_stream_construction.dir/rule
-.PHONY : tests/CMakeFiles/byte_stream_construction.dir/rule
-
-# Convenience name for target.
-byte_stream_construction: tests/CMakeFiles/byte_stream_construction.dir/rule
-
-.PHONY : byte_stream_construction
-
-# fast build rule for target.
-byte_stream_construction/fast:
-	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/byte_stream_construction.dir/build.make tests/CMakeFiles/byte_stream_construction.dir/build
-.PHONY : byte_stream_construction/fast
-
-# Convenience name for target.
-tests/CMakeFiles/fsm_stream_reassembler_win.dir/rule:
-	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_win.dir/rule
-.PHONY : tests/CMakeFiles/fsm_stream_reassembler_win.dir/rule
-
-# Convenience name for target.
-fsm_stream_reassembler_win: tests/CMakeFiles/fsm_stream_reassembler_win.dir/rule
-
-.PHONY : fsm_stream_reassembler_win
-
-# fast build rule for target.
-fsm_stream_reassembler_win/fast:
-	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_win.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_win.dir/build
-.PHONY : fsm_stream_reassembler_win/fast
-
-# Convenience name for target.
-tests/CMakeFiles/fsm_stream_reassembler_cap.dir/rule:
-	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_cap.dir/rule
-.PHONY : tests/CMakeFiles/fsm_stream_reassembler_cap.dir/rule
-
-# Convenience name for target.
-fsm_stream_reassembler_cap: tests/CMakeFiles/fsm_stream_reassembler_cap.dir/rule
-
-.PHONY : fsm_stream_reassembler_cap
-
-# fast build rule for target.
-fsm_stream_reassembler_cap/fast:
-	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_cap.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_cap.dir/build
-.PHONY : fsm_stream_reassembler_cap/fast
+byte_stream_capacity/fast:
+	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/byte_stream_capacity.dir/build.make tests/CMakeFiles/byte_stream_capacity.dir/build
+.PHONY : byte_stream_capacity/fast
 
 # Convenience name for target.
 tests/CMakeFiles/spongechecks.dir/rule:
@@ -392,6 +242,81 @@ spongechecks/fast:
 .PHONY : spongechecks/fast
 
 # Convenience name for target.
+tests/CMakeFiles/tcp_parser.dir/rule:
+	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/tcp_parser.dir/rule
+.PHONY : tests/CMakeFiles/tcp_parser.dir/rule
+
+# Convenience name for target.
+tcp_parser: tests/CMakeFiles/tcp_parser.dir/rule
+
+.PHONY : tcp_parser
+
+# fast build rule for target.
+tcp_parser/fast:
+	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/tcp_parser.dir/build.make tests/CMakeFiles/tcp_parser.dir/build
+.PHONY : tcp_parser/fast
+
+# Convenience name for target.
+tests/CMakeFiles/recv_special.dir/rule:
+	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/recv_special.dir/rule
+.PHONY : tests/CMakeFiles/recv_special.dir/rule
+
+# Convenience name for target.
+recv_special: tests/CMakeFiles/recv_special.dir/rule
+
+.PHONY : recv_special
+
+# fast build rule for target.
+recv_special/fast:
+	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/recv_special.dir/build.make tests/CMakeFiles/recv_special.dir/build
+.PHONY : recv_special/fast
+
+# Convenience name for target.
+tests/CMakeFiles/recv_window.dir/rule:
+	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/recv_window.dir/rule
+.PHONY : tests/CMakeFiles/recv_window.dir/rule
+
+# Convenience name for target.
+recv_window: tests/CMakeFiles/recv_window.dir/rule
+
+.PHONY : recv_window
+
+# fast build rule for target.
+recv_window/fast:
+	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/recv_window.dir/build.make tests/CMakeFiles/recv_window.dir/build
+.PHONY : recv_window/fast
+
+# Convenience name for target.
+tests/CMakeFiles/byte_stream_many_writes.dir/rule:
+	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/byte_stream_many_writes.dir/rule
+.PHONY : tests/CMakeFiles/byte_stream_many_writes.dir/rule
+
+# Convenience name for target.
+byte_stream_many_writes: tests/CMakeFiles/byte_stream_many_writes.dir/rule
+
+.PHONY : byte_stream_many_writes
+
+# fast build rule for target.
+byte_stream_many_writes/fast:
+	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/byte_stream_many_writes.dir/build.make tests/CMakeFiles/byte_stream_many_writes.dir/build
+.PHONY : byte_stream_many_writes/fast
+
+# Convenience name for target.
+tests/CMakeFiles/fsm_stream_reassembler_cap.dir/rule:
+	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_cap.dir/rule
+.PHONY : tests/CMakeFiles/fsm_stream_reassembler_cap.dir/rule
+
+# Convenience name for target.
+fsm_stream_reassembler_cap: tests/CMakeFiles/fsm_stream_reassembler_cap.dir/rule
+
+.PHONY : fsm_stream_reassembler_cap
+
+# fast build rule for target.
+fsm_stream_reassembler_cap/fast:
+	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_cap.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_cap.dir/build
+.PHONY : fsm_stream_reassembler_cap/fast
+
+# Convenience name for target.
 tests/CMakeFiles/byte_stream_one_write.dir/rule:
 	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/byte_stream_one_write.dir/rule
 .PHONY : tests/CMakeFiles/byte_stream_one_write.dir/rule
@@ -405,6 +330,96 @@ byte_stream_one_write: tests/CMakeFiles/byte_stream_one_write.dir/rule
 byte_stream_one_write/fast:
 	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/byte_stream_one_write.dir/build.make tests/CMakeFiles/byte_stream_one_write.dir/build
 .PHONY : byte_stream_one_write/fast
+
+# Convenience name for target.
+tests/CMakeFiles/wrapping_integers_roundtrip.dir/rule:
+	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/wrapping_integers_roundtrip.dir/rule
+.PHONY : tests/CMakeFiles/wrapping_integers_roundtrip.dir/rule
+
+# Convenience name for target.
+wrapping_integers_roundtrip: tests/CMakeFiles/wrapping_integers_roundtrip.dir/rule
+
+.PHONY : wrapping_integers_roundtrip
+
+# fast build rule for target.
+wrapping_integers_roundtrip/fast:
+	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/wrapping_integers_roundtrip.dir/build.make tests/CMakeFiles/wrapping_integers_roundtrip.dir/build
+.PHONY : wrapping_integers_roundtrip/fast
+
+# Convenience name for target.
+tests/CMakeFiles/fsm_stream_reassembler_single.dir/rule:
+	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_single.dir/rule
+.PHONY : tests/CMakeFiles/fsm_stream_reassembler_single.dir/rule
+
+# Convenience name for target.
+fsm_stream_reassembler_single: tests/CMakeFiles/fsm_stream_reassembler_single.dir/rule
+
+.PHONY : fsm_stream_reassembler_single
+
+# fast build rule for target.
+fsm_stream_reassembler_single/fast:
+	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_single.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_single.dir/build
+.PHONY : fsm_stream_reassembler_single/fast
+
+# Convenience name for target.
+tests/CMakeFiles/fsm_stream_reassembler_seq.dir/rule:
+	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_seq.dir/rule
+.PHONY : tests/CMakeFiles/fsm_stream_reassembler_seq.dir/rule
+
+# Convenience name for target.
+fsm_stream_reassembler_seq: tests/CMakeFiles/fsm_stream_reassembler_seq.dir/rule
+
+.PHONY : fsm_stream_reassembler_seq
+
+# fast build rule for target.
+fsm_stream_reassembler_seq/fast:
+	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_seq.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_seq.dir/build
+.PHONY : fsm_stream_reassembler_seq/fast
+
+# Convenience name for target.
+tests/CMakeFiles/fsm_stream_reassembler_dup.dir/rule:
+	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_dup.dir/rule
+.PHONY : tests/CMakeFiles/fsm_stream_reassembler_dup.dir/rule
+
+# Convenience name for target.
+fsm_stream_reassembler_dup: tests/CMakeFiles/fsm_stream_reassembler_dup.dir/rule
+
+.PHONY : fsm_stream_reassembler_dup
+
+# fast build rule for target.
+fsm_stream_reassembler_dup/fast:
+	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_dup.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_dup.dir/build
+.PHONY : fsm_stream_reassembler_dup/fast
+
+# Convenience name for target.
+tests/CMakeFiles/fsm_stream_reassembler_holes.dir/rule:
+	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_holes.dir/rule
+.PHONY : tests/CMakeFiles/fsm_stream_reassembler_holes.dir/rule
+
+# Convenience name for target.
+fsm_stream_reassembler_holes: tests/CMakeFiles/fsm_stream_reassembler_holes.dir/rule
+
+.PHONY : fsm_stream_reassembler_holes
+
+# fast build rule for target.
+fsm_stream_reassembler_holes/fast:
+	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_holes.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_holes.dir/build
+.PHONY : fsm_stream_reassembler_holes/fast
+
+# Convenience name for target.
+tests/CMakeFiles/byte_stream_construction.dir/rule:
+	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/byte_stream_construction.dir/rule
+.PHONY : tests/CMakeFiles/byte_stream_construction.dir/rule
+
+# Convenience name for target.
+byte_stream_construction: tests/CMakeFiles/byte_stream_construction.dir/rule
+
+.PHONY : byte_stream_construction
+
+# fast build rule for target.
+byte_stream_construction/fast:
+	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/byte_stream_construction.dir/build.make tests/CMakeFiles/byte_stream_construction.dir/build
+.PHONY : byte_stream_construction/fast
 
 # Convenience name for target.
 tests/CMakeFiles/fsm_stream_reassembler_many.dir/rule:
@@ -437,19 +452,34 @@ fsm_stream_reassembler_overlapping/fast:
 .PHONY : fsm_stream_reassembler_overlapping/fast
 
 # Convenience name for target.
-tests/CMakeFiles/byte_stream_capacity.dir/rule:
-	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/byte_stream_capacity.dir/rule
-.PHONY : tests/CMakeFiles/byte_stream_capacity.dir/rule
+tests/CMakeFiles/recv_reorder.dir/rule:
+	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/recv_reorder.dir/rule
+.PHONY : tests/CMakeFiles/recv_reorder.dir/rule
 
 # Convenience name for target.
-byte_stream_capacity: tests/CMakeFiles/byte_stream_capacity.dir/rule
+recv_reorder: tests/CMakeFiles/recv_reorder.dir/rule
 
-.PHONY : byte_stream_capacity
+.PHONY : recv_reorder
 
 # fast build rule for target.
-byte_stream_capacity/fast:
-	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/byte_stream_capacity.dir/build.make tests/CMakeFiles/byte_stream_capacity.dir/build
-.PHONY : byte_stream_capacity/fast
+recv_reorder/fast:
+	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/recv_reorder.dir/build.make tests/CMakeFiles/recv_reorder.dir/build
+.PHONY : recv_reorder/fast
+
+# Convenience name for target.
+tests/CMakeFiles/fsm_stream_reassembler_win.dir/rule:
+	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fsm_stream_reassembler_win.dir/rule
+.PHONY : tests/CMakeFiles/fsm_stream_reassembler_win.dir/rule
+
+# Convenience name for target.
+fsm_stream_reassembler_win: tests/CMakeFiles/fsm_stream_reassembler_win.dir/rule
+
+.PHONY : fsm_stream_reassembler_win
+
+# fast build rule for target.
+fsm_stream_reassembler_win/fast:
+	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/fsm_stream_reassembler_win.dir/build.make tests/CMakeFiles/fsm_stream_reassembler_win.dir/build
+.PHONY : fsm_stream_reassembler_win/fast
 
 # Convenience name for target.
 tests/CMakeFiles/byte_stream_two_writes.dir/rule:
@@ -465,36 +495,6 @@ byte_stream_two_writes: tests/CMakeFiles/byte_stream_two_writes.dir/rule
 byte_stream_two_writes/fast:
 	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/byte_stream_two_writes.dir/build.make tests/CMakeFiles/byte_stream_two_writes.dir/build
 .PHONY : byte_stream_two_writes/fast
-
-# Convenience name for target.
-tests/CMakeFiles/wrapping_integers_wrap.dir/rule:
-	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/wrapping_integers_wrap.dir/rule
-.PHONY : tests/CMakeFiles/wrapping_integers_wrap.dir/rule
-
-# Convenience name for target.
-wrapping_integers_wrap: tests/CMakeFiles/wrapping_integers_wrap.dir/rule
-
-.PHONY : wrapping_integers_wrap
-
-# fast build rule for target.
-wrapping_integers_wrap/fast:
-	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/wrapping_integers_wrap.dir/build.make tests/CMakeFiles/wrapping_integers_wrap.dir/build
-.PHONY : wrapping_integers_wrap/fast
-
-# Convenience name for target.
-tests/CMakeFiles/byte_stream_many_writes.dir/rule:
-	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/byte_stream_many_writes.dir/rule
-.PHONY : tests/CMakeFiles/byte_stream_many_writes.dir/rule
-
-# Convenience name for target.
-byte_stream_many_writes: tests/CMakeFiles/byte_stream_many_writes.dir/rule
-
-.PHONY : byte_stream_many_writes
-
-# fast build rule for target.
-byte_stream_many_writes/fast:
-	cd /home/cs144/sponge/build && $(MAKE) -f tests/CMakeFiles/byte_stream_many_writes.dir/build.make tests/CMakeFiles/byte_stream_many_writes.dir/build
-.PHONY : byte_stream_many_writes/fast
 
 byte_stream_capacity.o: byte_stream_capacity.cc.o
 
@@ -1177,34 +1177,34 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... recv_special"
-	@echo "... recv_reorder"
 	@echo "... recv_close"
-	@echo "... recv_window"
 	@echo "... recv_transmit"
 	@echo "... recv_connect"
-	@echo "... wrapping_integers_roundtrip"
-	@echo "... wrapping_integers_unwrap"
-	@echo "... fsm_stream_reassembler_seq"
-	@echo "... fsm_stream_reassembler_single"
-	@echo "... wrapping_integers_cmp"
-	@echo "... fsm_stream_reassembler_holes"
-	@echo "... tcp_parser"
-	@echo "... fsm_stream_reassembler_dup"
-	@echo "... byte_stream_construction"
-	@echo "... fsm_stream_reassembler_win"
-	@echo "... edit_cache"
-	@echo "... fsm_stream_reassembler_cap"
-	@echo "... spongechecks"
-	@echo "... byte_stream_one_write"
-	@echo "... fsm_stream_reassembler_many"
-	@echo "... fsm_stream_reassembler_overlapping"
-	@echo "... byte_stream_capacity"
-	@echo "... byte_stream_two_writes"
 	@echo "... wrapping_integers_wrap"
+	@echo "... wrapping_integers_unwrap"
+	@echo "... wrapping_integers_cmp"
+	@echo "... byte_stream_capacity"
+	@echo "... spongechecks"
+	@echo "... tcp_parser"
+	@echo "... recv_special"
+	@echo "... recv_window"
 	@echo "... byte_stream_many_writes"
+	@echo "... fsm_stream_reassembler_cap"
+	@echo "... byte_stream_one_write"
+	@echo "... wrapping_integers_roundtrip"
+	@echo "... fsm_stream_reassembler_single"
+	@echo "... fsm_stream_reassembler_seq"
+	@echo "... fsm_stream_reassembler_dup"
+	@echo "... fsm_stream_reassembler_holes"
+	@echo "... byte_stream_construction"
+	@echo "... fsm_stream_reassembler_many"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... fsm_stream_reassembler_overlapping"
+	@echo "... recv_reorder"
+	@echo "... fsm_stream_reassembler_win"
+	@echo "... byte_stream_two_writes"
 	@echo "... byte_stream_capacity.o"
 	@echo "... byte_stream_capacity.i"
 	@echo "... byte_stream_capacity.s"
