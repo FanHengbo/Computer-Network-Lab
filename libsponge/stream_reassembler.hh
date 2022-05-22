@@ -66,7 +66,7 @@ class StreamReassembler {
     bool empty() const;
     long Merge(Block &b1, const Block &b2);
     void check_eof();
-    bool output_ended() const { return _output.input_ended(); }
+    //bool output_ended() const { return _output.input_ended(); }
 };
 
 #endif  // SPONGE_LIBSPONGE_STREAM_REASSEMBLER_HH

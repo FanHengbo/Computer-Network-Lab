@@ -72,6 +72,7 @@ optional<WrappingInt32> TCPReceiver::ackno() const
     {
         if (!_reassembler.empty())
         {
+            //The segment with FIN flag set is not the final piece of PUZZLE
             return wrap(expectedIndex + 1, _isn);
         }
         else
