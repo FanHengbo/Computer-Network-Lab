@@ -1,35 +1,35 @@
-t_byte_stream_construction 66 6.36361e-05
-t_byte_stream_one_write 64 8.45008e-05
-t_byte_stream_two_writes 64 5.53429e-05
-t_byte_stream_capacity 64 0.0060667
-t_byte_stream_many_writes 66 0.000608271
+t_byte_stream_construction 77 2.85204e-05
+t_byte_stream_one_write 75 9.93601e-05
+t_byte_stream_two_writes 75 0.000192401
+t_byte_stream_capacity 75 0.00649295
+t_byte_stream_many_writes 77 7.652e-05
 t_webget 4 0.449638
-t_address_dt 66 0.000387318
-t_parser_dt 66 2.90437e-05
-t_socket_dt 66 0.000106924
-t_strm_reassem_single 50 0.000172639
-t_strm_reassem_seq 60 0.000146631
-t_strm_reassem_dup 55 0.000202838
-t_strm_reassem_holes 30 0.000286571
-t_strm_reassem_many 30 0.00383391
-t_strm_reassem_overlapping 21 0.000182947
-t_strm_reassem_win 30 0.0036421
-t_strm_reassem_cap 36 0.00190853
-t_wrapping_ints_cmp 38 0.000305213
-t_wrapping_ints_unwrap 27 5.54102e-05
-t_wrapping_ints_wrap 36 3.20011e-05
-t_wrapping_ints_roundtrip 25 0.00763344
-t_recv_connect 10 0.000347185
-t_recv_transmit 15 0.0035954
-t_recv_window 9 0.000845671
-t_recv_reorder 15 0.000661405
-t_recv_close 9 0.00103778
-t_recv_special 1 0.00749922
-t_send_connect 0 0
-t_send_transmit 0 0
+t_address_dt 77 0.000923612
+t_parser_dt 77 7.60648e-05
+t_socket_dt 77 8.49235e-05
+t_strm_reassem_single 61 5.19987e-05
+t_strm_reassem_seq 71 2.79722e-05
+t_strm_reassem_dup 66 0.000111771
+t_strm_reassem_holes 41 0.000102415
+t_strm_reassem_many 41 0.00357832
+t_strm_reassem_overlapping 32 5.26607e-05
+t_strm_reassem_win 41 0.00383112
+t_strm_reassem_cap 47 0.0016867
+t_wrapping_ints_cmp 49 0.000285771
+t_wrapping_ints_unwrap 38 0.000215524
+t_wrapping_ints_wrap 47 0.000179874
+t_wrapping_ints_roundtrip 36 0.00442575
+t_recv_connect 21 0.000100283
+t_recv_transmit 26 0.00220438
+t_recv_window 20 0.00051924
+t_recv_reorder 26 0.000411621
+t_recv_close 20 0.000526845
+t_recv_special 12 0.000639677
+t_send_connect 4 0.00169927
+t_send_transmit 1 0.0663519
 t_send_retx 0 0
 t_send_window 0 0
-t_send_ack 0 0
+t_send_ack 3 0.00487574
 t_send_close 0 0
 t_send_extra 0 0
 arp_network_interface 0 0
@@ -168,3 +168,7 @@ t_isnD_128K_8K_l 0 0
 t_isnD_128K_8K_L 0 0
 t_isnD_128K_8K_lL 0 0
 ---
+t_send_retx
+t_send_window
+t_send_close
+t_send_extra

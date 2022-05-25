@@ -20,6 +20,35 @@ int main() {
             WrappingInt32 isn(rd());
             cfg.fixed_isn = isn;
 
+            TCPSenderTestHarness test{"Window filling", cfg};
+            test.execute(ExpectSegment{}.with_no_flags().with_syn(true).with_payload_size(0).with_seqno(isn));
+            test.execute(AckReceived{WrappingInt32{isn + 1}}.with_win(3));
+            test.execute(ExpectState{TCPSenderStateSummary::SYN_ACKED});
+            test.execute(WriteBytes("01234567"));
+            test.execute(ExpectBytesInFlight{3});
+            test.execute(ExpectSegment{}.with_data("012"));
+            test.execute(ExpectNoSegment{});
+            test.execute(ExpectSeqno{WrappingInt32{isn + 1 + 3}});
+            test.execute(AckReceived{WrappingInt32{isn + 1 + 3}}.with_win(3));
+            test.execute(ExpectBytesInFlight{3});
+            test.execute(ExpectSegment{}.with_data("345"));
+            test.execute(ExpectNoSegment{});
+            test.execute(ExpectSeqno{WrappingInt32{isn + 1 + 6}});
+            test.execute(AckReceived{WrappingInt32{isn + 1 + 6}}.with_win(3));
+            test.execute(ExpectBytesInFlight{2});
+            test.execute(ExpectSegment{}.with_data("67"));
+            test.execute(ExpectNoSegment{});
+            test.execute(ExpectSeqno{WrappingInt32{isn + 1 + 8}});
+            test.execute(AckReceived{WrappingInt32{isn + 1 + 8}}.with_win(3));
+            test.execute(ExpectBytesInFlight{0});
+            test.execute(ExpectNoSegment{});
+        }
+
+        {
+            TCPConfig cfg;
+            WrappingInt32 isn(rd());
+            cfg.fixed_isn = isn;
+
             TCPSenderTestHarness test{"Three short writes", cfg};
             test.execute(ExpectSegment{}.with_no_flags().with_syn(true).with_payload_size(0).with_seqno(isn));
             test.execute(AckReceived{WrappingInt32{isn + 1}});
