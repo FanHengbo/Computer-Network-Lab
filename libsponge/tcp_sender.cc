@@ -127,7 +127,7 @@ void TCPSender::tick(const size_t ms_since_last_tick)
     if (_timer_is_running)
     {
         _timer += ms_since_last_tick;
-        if (_timer > _retransmission_timeout)
+        if (_timer >= _retransmission_timeout)
         {
             //Timer has expired, retansmit the earliest segment again
             seg = _outstanding_segments.front();
