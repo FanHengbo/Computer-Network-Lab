@@ -60,15 +60,15 @@ include doctests/CMakeFiles/address_dt.dir/flags.make
 doctests/CMakeFiles/address_dt.dir/address_dt.cc.o: doctests/CMakeFiles/address_dt.dir/flags.make
 doctests/CMakeFiles/address_dt.dir/address_dt.cc.o: ../doctests/address_dt.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cs144/sponge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object doctests/CMakeFiles/address_dt.dir/address_dt.cc.o"
-	cd /home/cs144/sponge/build/doctests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/address_dt.dir/address_dt.cc.o -c /home/cs144/sponge/doctests/address_dt.cc
+	cd /home/cs144/sponge/build/doctests && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/address_dt.dir/address_dt.cc.o -c /home/cs144/sponge/doctests/address_dt.cc
 
 doctests/CMakeFiles/address_dt.dir/address_dt.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/address_dt.dir/address_dt.cc.i"
-	cd /home/cs144/sponge/build/doctests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cs144/sponge/doctests/address_dt.cc > CMakeFiles/address_dt.dir/address_dt.cc.i
+	cd /home/cs144/sponge/build/doctests && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cs144/sponge/doctests/address_dt.cc > CMakeFiles/address_dt.dir/address_dt.cc.i
 
 doctests/CMakeFiles/address_dt.dir/address_dt.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/address_dt.dir/address_dt.cc.s"
-	cd /home/cs144/sponge/build/doctests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cs144/sponge/doctests/address_dt.cc -o CMakeFiles/address_dt.dir/address_dt.cc.s
+	cd /home/cs144/sponge/build/doctests && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cs144/sponge/doctests/address_dt.cc -o CMakeFiles/address_dt.dir/address_dt.cc.s
 
 doctests/CMakeFiles/address_dt.dir/address_dt.cc.o.requires:
 

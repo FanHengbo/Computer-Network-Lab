@@ -60,15 +60,15 @@ include tests/CMakeFiles/fsm_stream_reassembler_dup.dir/flags.make
 tests/CMakeFiles/fsm_stream_reassembler_dup.dir/fsm_stream_reassembler_dup.cc.o: tests/CMakeFiles/fsm_stream_reassembler_dup.dir/flags.make
 tests/CMakeFiles/fsm_stream_reassembler_dup.dir/fsm_stream_reassembler_dup.cc.o: ../tests/fsm_stream_reassembler_dup.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cs144/sponge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/fsm_stream_reassembler_dup.dir/fsm_stream_reassembler_dup.cc.o"
-	cd /home/cs144/sponge/build/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fsm_stream_reassembler_dup.dir/fsm_stream_reassembler_dup.cc.o -c /home/cs144/sponge/tests/fsm_stream_reassembler_dup.cc
+	cd /home/cs144/sponge/build/tests && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fsm_stream_reassembler_dup.dir/fsm_stream_reassembler_dup.cc.o -c /home/cs144/sponge/tests/fsm_stream_reassembler_dup.cc
 
 tests/CMakeFiles/fsm_stream_reassembler_dup.dir/fsm_stream_reassembler_dup.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fsm_stream_reassembler_dup.dir/fsm_stream_reassembler_dup.cc.i"
-	cd /home/cs144/sponge/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cs144/sponge/tests/fsm_stream_reassembler_dup.cc > CMakeFiles/fsm_stream_reassembler_dup.dir/fsm_stream_reassembler_dup.cc.i
+	cd /home/cs144/sponge/build/tests && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cs144/sponge/tests/fsm_stream_reassembler_dup.cc > CMakeFiles/fsm_stream_reassembler_dup.dir/fsm_stream_reassembler_dup.cc.i
 
 tests/CMakeFiles/fsm_stream_reassembler_dup.dir/fsm_stream_reassembler_dup.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fsm_stream_reassembler_dup.dir/fsm_stream_reassembler_dup.cc.s"
-	cd /home/cs144/sponge/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cs144/sponge/tests/fsm_stream_reassembler_dup.cc -o CMakeFiles/fsm_stream_reassembler_dup.dir/fsm_stream_reassembler_dup.cc.s
+	cd /home/cs144/sponge/build/tests && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cs144/sponge/tests/fsm_stream_reassembler_dup.cc -o CMakeFiles/fsm_stream_reassembler_dup.dir/fsm_stream_reassembler_dup.cc.s
 
 tests/CMakeFiles/fsm_stream_reassembler_dup.dir/fsm_stream_reassembler_dup.cc.o.requires:
 

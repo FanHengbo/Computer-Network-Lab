@@ -60,15 +60,15 @@ include doctests/CMakeFiles/socket_dt.dir/flags.make
 doctests/CMakeFiles/socket_dt.dir/socket_dt.cc.o: doctests/CMakeFiles/socket_dt.dir/flags.make
 doctests/CMakeFiles/socket_dt.dir/socket_dt.cc.o: ../doctests/socket_dt.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cs144/sponge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object doctests/CMakeFiles/socket_dt.dir/socket_dt.cc.o"
-	cd /home/cs144/sponge/build/doctests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/socket_dt.dir/socket_dt.cc.o -c /home/cs144/sponge/doctests/socket_dt.cc
+	cd /home/cs144/sponge/build/doctests && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/socket_dt.dir/socket_dt.cc.o -c /home/cs144/sponge/doctests/socket_dt.cc
 
 doctests/CMakeFiles/socket_dt.dir/socket_dt.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/socket_dt.dir/socket_dt.cc.i"
-	cd /home/cs144/sponge/build/doctests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cs144/sponge/doctests/socket_dt.cc > CMakeFiles/socket_dt.dir/socket_dt.cc.i
+	cd /home/cs144/sponge/build/doctests && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cs144/sponge/doctests/socket_dt.cc > CMakeFiles/socket_dt.dir/socket_dt.cc.i
 
 doctests/CMakeFiles/socket_dt.dir/socket_dt.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/socket_dt.dir/socket_dt.cc.s"
-	cd /home/cs144/sponge/build/doctests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cs144/sponge/doctests/socket_dt.cc -o CMakeFiles/socket_dt.dir/socket_dt.cc.s
+	cd /home/cs144/sponge/build/doctests && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cs144/sponge/doctests/socket_dt.cc -o CMakeFiles/socket_dt.dir/socket_dt.cc.s
 
 doctests/CMakeFiles/socket_dt.dir/socket_dt.cc.o.requires:
 

@@ -1,17 +1,17 @@
-Start testing: May 25 01:57 PDT
+Start testing: Jun 13 19:55 PDT
 ----------------------------------------------------------
 1/169 Testing: t_wrapping_ints_cmp
 1/169 Test: t_wrapping_ints_cmp
 Command: "/home/cs144/sponge/build/tests/wrapping_integers_cmp"
 Directory: /home/cs144/sponge/build
-"t_wrapping_ints_cmp" start time: May 25 01:57 PDT
+"t_wrapping_ints_cmp" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_wrapping_ints_cmp" end time: May 25 01:57 PDT
+"t_wrapping_ints_cmp" end time: Jun 13 19:55 PDT
 "t_wrapping_ints_cmp" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -19,14 +19,14 @@ Test Passed.
 2/169 Test: t_wrapping_ints_unwrap
 Command: "/home/cs144/sponge/build/tests/wrapping_integers_unwrap"
 Directory: /home/cs144/sponge/build
-"t_wrapping_ints_unwrap" start time: May 25 01:57 PDT
+"t_wrapping_ints_unwrap" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_wrapping_ints_unwrap" end time: May 25 01:57 PDT
+"t_wrapping_ints_unwrap" end time: Jun 13 19:55 PDT
 "t_wrapping_ints_unwrap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -34,14 +34,14 @@ Test Passed.
 3/169 Test: t_wrapping_ints_wrap
 Command: "/home/cs144/sponge/build/tests/wrapping_integers_wrap"
 Directory: /home/cs144/sponge/build
-"t_wrapping_ints_wrap" start time: May 25 01:57 PDT
+"t_wrapping_ints_wrap" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_wrapping_ints_wrap" end time: May 25 01:57 PDT
+"t_wrapping_ints_wrap" end time: Jun 13 19:55 PDT
 "t_wrapping_ints_wrap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -49,14 +49,14 @@ Test Passed.
 4/169 Test: t_wrapping_ints_roundtrip
 Command: "/home/cs144/sponge/build/tests/wrapping_integers_roundtrip"
 Directory: /home/cs144/sponge/build
-"t_wrapping_ints_roundtrip" start time: May 25 01:57 PDT
+"t_wrapping_ints_roundtrip" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.16 sec
+Test time =   0.10 sec
 ----------------------------------------------------------
 Test Passed.
-"t_wrapping_ints_roundtrip" end time: May 25 01:57 PDT
+"t_wrapping_ints_roundtrip" end time: Jun 13 19:55 PDT
 "t_wrapping_ints_roundtrip" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -64,14 +64,14 @@ Test Passed.
 5/169 Test: t_recv_connect
 Command: "/home/cs144/sponge/build/tests/recv_connect"
 Directory: /home/cs144/sponge/build
-"t_recv_connect" start time: May 25 01:57 PDT
+"t_recv_connect" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_recv_connect" end time: May 25 01:57 PDT
+"t_recv_connect" end time: Jun 13 19:55 PDT
 "t_recv_connect" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -79,14 +79,14 @@ Test Passed.
 6/169 Test: t_recv_transmit
 Command: "/home/cs144/sponge/build/tests/recv_transmit"
 Directory: /home/cs144/sponge/build
-"t_recv_transmit" start time: May 25 01:57 PDT
+"t_recv_transmit" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.06 sec
+Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"t_recv_transmit" end time: May 25 01:57 PDT
+"t_recv_transmit" end time: Jun 13 19:55 PDT
 "t_recv_transmit" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -94,14 +94,14 @@ Test Passed.
 7/169 Test: t_recv_window
 Command: "/home/cs144/sponge/build/tests/recv_window"
 Directory: /home/cs144/sponge/build
-"t_recv_window" start time: May 25 01:57 PDT
+"t_recv_window" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_recv_window" end time: May 25 01:57 PDT
+"t_recv_window" end time: Jun 13 19:55 PDT
 "t_recv_window" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -109,14 +109,14 @@ Test Passed.
 8/169 Test: t_recv_reorder
 Command: "/home/cs144/sponge/build/tests/recv_reorder"
 Directory: /home/cs144/sponge/build
-"t_recv_reorder" start time: May 25 01:57 PDT
+"t_recv_reorder" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_recv_reorder" end time: May 25 01:57 PDT
+"t_recv_reorder" end time: Jun 13 19:55 PDT
 "t_recv_reorder" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -124,14 +124,14 @@ Test Passed.
 9/169 Test: t_recv_close
 Command: "/home/cs144/sponge/build/tests/recv_close"
 Directory: /home/cs144/sponge/build
-"t_recv_close" start time: May 25 01:57 PDT
+"t_recv_close" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_recv_close" end time: May 25 01:57 PDT
+"t_recv_close" end time: Jun 13 19:55 PDT
 "t_recv_close" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -139,14 +139,14 @@ Test Passed.
 10/169 Test: t_recv_special
 Command: "/home/cs144/sponge/build/tests/recv_special"
 Directory: /home/cs144/sponge/build
-"t_recv_special" start time: May 25 01:57 PDT
+"t_recv_special" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_recv_special" end time: May 25 01:57 PDT
+"t_recv_special" end time: Jun 13 19:55 PDT
 "t_recv_special" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -154,14 +154,14 @@ Test Passed.
 11/169 Test: t_send_connect
 Command: "/home/cs144/sponge/build/tests/send_connect"
 Directory: /home/cs144/sponge/build
-"t_send_connect" start time: May 25 01:57 PDT
+"t_send_connect" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_send_connect" end time: May 25 01:57 PDT
+"t_send_connect" end time: Jun 13 19:55 PDT
 "t_send_connect" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -169,14 +169,14 @@ Test Passed.
 12/169 Test: t_send_transmit
 Command: "/home/cs144/sponge/build/tests/send_transmit"
 Directory: /home/cs144/sponge/build
-"t_send_transmit" start time: May 25 01:57 PDT
+"t_send_transmit" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.07 sec
+Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"t_send_transmit" end time: May 25 01:57 PDT
+"t_send_transmit" end time: Jun 13 19:55 PDT
 "t_send_transmit" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -184,30 +184,14 @@ Test Passed.
 13/169 Test: t_send_retx
 Command: "/home/cs144/sponge/build/tests/send_retx"
 Directory: /home/cs144/sponge/build
-"t_send_retx" start time: May 25 01:57 PDT
+"t_send_retx" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
-Test Failure on expectation:
-	Expectation: segment sent with (A=0,R=0,S=1,F=0,seqno=2566783244,payload_size=0,...)
-
-Failure message:
-	The Sender should have produced a segment that existed, but it did not
-
-List of steps that executed successfully:
-	Initialized with (retx-timeout=6419) and called fill_window()
-	Expectation: segment sent with (A=0,R=0,S=1,F=0,seqno=2566783244,payload_size=0,...)
-	Expectation: no (more) segments
-	Expectation: in state `stream started but nothing acknowledged`
-	Action:      6418 ms pass
-	Expectation: no (more) segments
-	Action:      1 ms pass
-
-The test "Retx SYN twice at the right times, then ack" failed
 <end of output>
-Test time =   0.02 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
-Test Failed.
-"t_send_retx" end time: May 25 01:57 PDT
+Test Passed.
+"t_send_retx" end time: Jun 13 19:55 PDT
 "t_send_retx" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -215,31 +199,14 @@ Test Failed.
 14/169 Test: t_send_window
 Command: "/home/cs144/sponge/build/tests/send_window"
 Directory: /home/cs144/sponge/build
-"t_send_window" start time: May 25 01:57 PDT
+"t_send_window" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
-Test Failure on expectation:
-	Expectation: no (more) segments
-
-Failure message:
-	The TCPSender sent a segment, but should not have. Segment info:
-	Header(flags=F,seqno=2103671922,ack=0,win=0) with 0 bytes
-
-List of steps that executed successfully:
-	Initialized with (retx-timeout=1000) and called fill_window()
-	Expectation: segment sent with (A=0,R=0,S=1,F=0,seqno=2103671914,payload_size=0,...)
-	Action:      ack 2103671915 winsize 7
-	Expectation: no (more) segments
-	Action:      write bytes: "1234567"
-	Action:      close
-	Expectation: segment sent with (A=0,R=0,S=0,F=0,"1234567",...)
-
-The test "FIN flag occupies space in window" failed
 <end of output>
-Test time =   0.02 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
-Test Failed.
-"t_send_window" end time: May 25 01:57 PDT
+Test Passed.
+"t_send_window" end time: Jun 13 19:55 PDT
 "t_send_window" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -247,14 +214,14 @@ Test Failed.
 15/169 Test: t_send_ack
 Command: "/home/cs144/sponge/build/tests/send_ack"
 Directory: /home/cs144/sponge/build
-"t_send_ack" start time: May 25 01:57 PDT
+"t_send_ack" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_send_ack" end time: May 25 01:57 PDT
+"t_send_ack" end time: Jun 13 19:55 PDT
 "t_send_ack" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -262,31 +229,14 @@ Test Passed.
 16/169 Test: t_send_close
 Command: "/home/cs144/sponge/build/tests/send_close"
 Directory: /home/cs144/sponge/build
-"t_send_close" start time: May 25 01:57 PDT
+"t_send_close" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
-Test Failure on expectation:
-	Expectation: in state `stream finished and fully acknowledged`
-
-Failure message:
-	The TCPSender was in state `stream finished (FIN sent) but not fully acknowledged`, but it was expected to be in state `stream finished and fully acknowledged`
-
-List of steps that executed successfully:
-	Initialized with (retx-timeout=1000) and called fill_window()
-	Expectation: segment sent with (A=0,R=0,S=1,F=0,seqno=4225178690,payload_size=0,...)
-	Action:      ack 4225178691 winsize 137
-	Expectation: in state `stream ongoing`
-	Action:      close
-	Expectation: in state `stream finished (FIN sent) but not fully acknowledged`
-	Expectation: segment sent with (F=1,seqno=4225178691,...)
-	Action:      ack 4225178692 winsize 137
-
-The test "FIN acked test" failed
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
-Test Failed.
-"t_send_close" end time: May 25 01:57 PDT
+Test Passed.
+"t_send_close" end time: Jun 13 19:55 PDT
 "t_send_close" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -294,35 +244,14 @@ Test Failed.
 17/169 Test: t_send_extra
 Command: "/home/cs144/sponge/build/tests/send_extra"
 Directory: /home/cs144/sponge/build
-"t_send_extra" start time: May 25 01:57 PDT
+"t_send_extra" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
-Test Failure on expectation:
-	Expectation: no (more) segments
-
-Failure message:
-	The TCPSender sent a segment, but should not have. Segment info:
-	Header(flags=,seqno=2254787589,ack=0,win=0) with 3 bytes
-
-List of steps that executed successfully:
-	Initialized with (retx-timeout=3368) and called fill_window()
-	Expectation: segment sent with (A=0,R=0,S=1,F=0,seqno=2254787585,payload_size=0,...)
-	Action:      ack 2254787586 winsize 1000
-	Expectation: in state `stream ongoing`
-	Action:      write bytes: "abc"
-	Expectation: segment sent with (seqno=2254787586,payload_size=3,"abc",...)
-	Action:      3363 ms pass
-	Action:      write bytes: "def"
-	Expectation: segment sent with (seqno=2254787589,payload_size=3,"def",...)
-	Action:      ack 2254787589 winsize 1000
-	Action:      3367 ms pass
-
-The test "Timer restarts on ACK of new data" failed
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
-Test Failed.
-"t_send_extra" end time: May 25 01:57 PDT
+Test Passed.
+"t_send_extra" end time: Jun 13 19:55 PDT
 "t_send_extra" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -330,14 +259,14 @@ Test Failed.
 18/169 Test: t_strm_reassem_single
 Command: "/home/cs144/sponge/build/tests/fsm_stream_reassembler_single"
 Directory: /home/cs144/sponge/build
-"t_strm_reassem_single" start time: May 25 01:57 PDT
+"t_strm_reassem_single" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_single" end time: May 25 01:57 PDT
+"t_strm_reassem_single" end time: Jun 13 19:55 PDT
 "t_strm_reassem_single" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -345,14 +274,14 @@ Test Passed.
 19/169 Test: t_strm_reassem_seq
 Command: "/home/cs144/sponge/build/tests/fsm_stream_reassembler_seq"
 Directory: /home/cs144/sponge/build
-"t_strm_reassem_seq" start time: May 25 01:57 PDT
+"t_strm_reassem_seq" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_seq" end time: May 25 01:57 PDT
+"t_strm_reassem_seq" end time: Jun 13 19:55 PDT
 "t_strm_reassem_seq" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -360,14 +289,14 @@ Test Passed.
 20/169 Test: t_strm_reassem_dup
 Command: "/home/cs144/sponge/build/tests/fsm_stream_reassembler_dup"
 Directory: /home/cs144/sponge/build
-"t_strm_reassem_dup" start time: May 25 01:57 PDT
+"t_strm_reassem_dup" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_dup" end time: May 25 01:57 PDT
+"t_strm_reassem_dup" end time: Jun 13 19:55 PDT
 "t_strm_reassem_dup" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -375,14 +304,14 @@ Test Passed.
 21/169 Test: t_strm_reassem_holes
 Command: "/home/cs144/sponge/build/tests/fsm_stream_reassembler_holes"
 Directory: /home/cs144/sponge/build
-"t_strm_reassem_holes" start time: May 25 01:57 PDT
+"t_strm_reassem_holes" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_holes" end time: May 25 01:57 PDT
+"t_strm_reassem_holes" end time: Jun 13 19:55 PDT
 "t_strm_reassem_holes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -390,14 +319,14 @@ Test Passed.
 22/169 Test: t_strm_reassem_many
 Command: "/home/cs144/sponge/build/tests/fsm_stream_reassembler_many"
 Directory: /home/cs144/sponge/build
-"t_strm_reassem_many" start time: May 25 01:57 PDT
+"t_strm_reassem_many" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.15 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_many" end time: May 25 01:57 PDT
+"t_strm_reassem_many" end time: Jun 13 19:55 PDT
 "t_strm_reassem_many" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -405,14 +334,14 @@ Test Passed.
 23/169 Test: t_strm_reassem_overlapping
 Command: "/home/cs144/sponge/build/tests/fsm_stream_reassembler_overlapping"
 Directory: /home/cs144/sponge/build
-"t_strm_reassem_overlapping" start time: May 25 01:57 PDT
+"t_strm_reassem_overlapping" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_overlapping" end time: May 25 01:57 PDT
+"t_strm_reassem_overlapping" end time: Jun 13 19:55 PDT
 "t_strm_reassem_overlapping" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -420,14 +349,14 @@ Test Passed.
 24/169 Test: t_strm_reassem_win
 Command: "/home/cs144/sponge/build/tests/fsm_stream_reassembler_win"
 Directory: /home/cs144/sponge/build
-"t_strm_reassem_win" start time: May 25 01:57 PDT
+"t_strm_reassem_win" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.16 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_win" end time: May 25 01:57 PDT
+"t_strm_reassem_win" end time: Jun 13 19:55 PDT
 "t_strm_reassem_win" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -435,14 +364,14 @@ Test Passed.
 25/169 Test: t_strm_reassem_cap
 Command: "/home/cs144/sponge/build/tests/fsm_stream_reassembler_cap"
 Directory: /home/cs144/sponge/build
-"t_strm_reassem_cap" start time: May 25 01:57 PDT
+"t_strm_reassem_cap" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.08 sec
+Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_cap" end time: May 25 01:57 PDT
+"t_strm_reassem_cap" end time: Jun 13 19:55 PDT
 "t_strm_reassem_cap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -450,14 +379,14 @@ Test Passed.
 26/169 Test: t_byte_stream_construction
 Command: "/home/cs144/sponge/build/tests/byte_stream_construction"
 Directory: /home/cs144/sponge/build
-"t_byte_stream_construction" start time: May 25 01:57 PDT
+"t_byte_stream_construction" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.00 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_construction" end time: May 25 01:57 PDT
+"t_byte_stream_construction" end time: Jun 13 19:55 PDT
 "t_byte_stream_construction" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -465,14 +394,14 @@ Test Passed.
 27/169 Test: t_byte_stream_one_write
 Command: "/home/cs144/sponge/build/tests/byte_stream_one_write"
 Directory: /home/cs144/sponge/build
-"t_byte_stream_one_write" start time: May 25 01:57 PDT
+"t_byte_stream_one_write" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_one_write" end time: May 25 01:57 PDT
+"t_byte_stream_one_write" end time: Jun 13 19:55 PDT
 "t_byte_stream_one_write" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -480,14 +409,14 @@ Test Passed.
 28/169 Test: t_byte_stream_two_writes
 Command: "/home/cs144/sponge/build/tests/byte_stream_two_writes"
 Directory: /home/cs144/sponge/build
-"t_byte_stream_two_writes" start time: May 25 01:57 PDT
+"t_byte_stream_two_writes" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_two_writes" end time: May 25 01:57 PDT
+"t_byte_stream_two_writes" end time: Jun 13 19:55 PDT
 "t_byte_stream_two_writes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -495,14 +424,14 @@ Test Passed.
 29/169 Test: t_byte_stream_capacity
 Command: "/home/cs144/sponge/build/tests/byte_stream_capacity"
 Directory: /home/cs144/sponge/build
-"t_byte_stream_capacity" start time: May 25 01:57 PDT
+"t_byte_stream_capacity" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.49 sec
+Test time =   0.29 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_capacity" end time: May 25 01:57 PDT
+"t_byte_stream_capacity" end time: Jun 13 19:55 PDT
 "t_byte_stream_capacity" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -510,14 +439,14 @@ Test Passed.
 30/169 Test: t_byte_stream_many_writes
 Command: "/home/cs144/sponge/build/tests/byte_stream_many_writes"
 Directory: /home/cs144/sponge/build
-"t_byte_stream_many_writes" start time: May 25 01:57 PDT
+"t_byte_stream_many_writes" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_many_writes" end time: May 25 01:57 PDT
+"t_byte_stream_many_writes" end time: Jun 13 19:55 PDT
 "t_byte_stream_many_writes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -525,14 +454,14 @@ Test Passed.
 53/169 Test: t_address_dt
 Command: "/home/cs144/sponge/build/doctests/address_dt"
 Directory: /home/cs144/sponge/build
-"t_address_dt" start time: May 25 01:57 PDT
+"t_address_dt" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.07 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"t_address_dt" end time: May 25 01:57 PDT
+"t_address_dt" end time: Jun 13 19:55 PDT
 "t_address_dt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -540,14 +469,14 @@ Test Passed.
 54/169 Test: t_parser_dt
 Command: "/home/cs144/sponge/build/doctests/parser_dt"
 Directory: /home/cs144/sponge/build
-"t_parser_dt" start time: May 25 01:57 PDT
+"t_parser_dt" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_parser_dt" end time: May 25 01:57 PDT
+"t_parser_dt" end time: Jun 13 19:55 PDT
 "t_parser_dt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -555,15 +484,15 @@ Test Passed.
 55/169 Test: t_socket_dt
 Command: "/home/cs144/sponge/build/doctests/socket_dt"
 Directory: /home/cs144/sponge/build
-"t_socket_dt" start time: May 25 01:57 PDT
+"t_socket_dt" start time: Jun 13 19:55 PDT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"t_socket_dt" end time: May 25 01:57 PDT
+"t_socket_dt" end time: Jun 13 19:55 PDT
 "t_socket_dt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 25 01:57 PDT
+End testing: Jun 13 19:55 PDT

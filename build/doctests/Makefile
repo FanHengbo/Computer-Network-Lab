@@ -122,21 +122,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-doctests/CMakeFiles/parser_dt.dir/rule:
-	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 doctests/CMakeFiles/parser_dt.dir/rule
-.PHONY : doctests/CMakeFiles/parser_dt.dir/rule
-
-# Convenience name for target.
-parser_dt: doctests/CMakeFiles/parser_dt.dir/rule
-
-.PHONY : parser_dt
-
-# fast build rule for target.
-parser_dt/fast:
-	cd /home/cs144/sponge/build && $(MAKE) -f doctests/CMakeFiles/parser_dt.dir/build.make doctests/CMakeFiles/parser_dt.dir/build
-.PHONY : parser_dt/fast
-
-# Convenience name for target.
 doctests/CMakeFiles/socket_dt.dir/rule:
 	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 doctests/CMakeFiles/socket_dt.dir/rule
 .PHONY : doctests/CMakeFiles/socket_dt.dir/rule
@@ -165,6 +150,21 @@ address_dt: doctests/CMakeFiles/address_dt.dir/rule
 address_dt/fast:
 	cd /home/cs144/sponge/build && $(MAKE) -f doctests/CMakeFiles/address_dt.dir/build.make doctests/CMakeFiles/address_dt.dir/build
 .PHONY : address_dt/fast
+
+# Convenience name for target.
+doctests/CMakeFiles/parser_dt.dir/rule:
+	cd /home/cs144/sponge/build && $(MAKE) -f CMakeFiles/Makefile2 doctests/CMakeFiles/parser_dt.dir/rule
+.PHONY : doctests/CMakeFiles/parser_dt.dir/rule
+
+# Convenience name for target.
+parser_dt: doctests/CMakeFiles/parser_dt.dir/rule
+
+.PHONY : parser_dt
+
+# fast build rule for target.
+parser_dt/fast:
+	cd /home/cs144/sponge/build && $(MAKE) -f doctests/CMakeFiles/parser_dt.dir/build.make doctests/CMakeFiles/parser_dt.dir/build
+.PHONY : parser_dt/fast
 
 address_dt.o: address_dt.cc.o
 
@@ -256,9 +256,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... parser_dt"
 	@echo "... socket_dt"
 	@echo "... address_dt"
+	@echo "... parser_dt"
 	@echo "... address_dt.o"
 	@echo "... address_dt.i"
 	@echo "... address_dt.s"

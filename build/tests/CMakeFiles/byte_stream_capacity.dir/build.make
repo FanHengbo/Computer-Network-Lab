@@ -60,15 +60,15 @@ include tests/CMakeFiles/byte_stream_capacity.dir/flags.make
 tests/CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.o: tests/CMakeFiles/byte_stream_capacity.dir/flags.make
 tests/CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.o: ../tests/byte_stream_capacity.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cs144/sponge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.o"
-	cd /home/cs144/sponge/build/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.o -c /home/cs144/sponge/tests/byte_stream_capacity.cc
+	cd /home/cs144/sponge/build/tests && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.o -c /home/cs144/sponge/tests/byte_stream_capacity.cc
 
 tests/CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.i"
-	cd /home/cs144/sponge/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cs144/sponge/tests/byte_stream_capacity.cc > CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.i
+	cd /home/cs144/sponge/build/tests && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cs144/sponge/tests/byte_stream_capacity.cc > CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.i
 
 tests/CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.s"
-	cd /home/cs144/sponge/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cs144/sponge/tests/byte_stream_capacity.cc -o CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.s
+	cd /home/cs144/sponge/build/tests && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cs144/sponge/tests/byte_stream_capacity.cc -o CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.s
 
 tests/CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.o.requires:
 

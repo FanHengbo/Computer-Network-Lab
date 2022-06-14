@@ -37,10 +37,10 @@ class TCPSender {
     bool _syn = false;
     bool _fin = false;
     size_t _window_size = 0;
-    bool _timer_is_running = false;
     size_t _retransmission_timeout = 0;
     size_t _consecutive_retransmission_count = 0;
     uint64_t _bytes_in_flight = 0;
+    
 
   public:
     //! Initialize a TCPSender

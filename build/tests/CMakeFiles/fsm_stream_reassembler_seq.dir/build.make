@@ -60,15 +60,15 @@ include tests/CMakeFiles/fsm_stream_reassembler_seq.dir/flags.make
 tests/CMakeFiles/fsm_stream_reassembler_seq.dir/fsm_stream_reassembler_seq.cc.o: tests/CMakeFiles/fsm_stream_reassembler_seq.dir/flags.make
 tests/CMakeFiles/fsm_stream_reassembler_seq.dir/fsm_stream_reassembler_seq.cc.o: ../tests/fsm_stream_reassembler_seq.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cs144/sponge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/fsm_stream_reassembler_seq.dir/fsm_stream_reassembler_seq.cc.o"
-	cd /home/cs144/sponge/build/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fsm_stream_reassembler_seq.dir/fsm_stream_reassembler_seq.cc.o -c /home/cs144/sponge/tests/fsm_stream_reassembler_seq.cc
+	cd /home/cs144/sponge/build/tests && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fsm_stream_reassembler_seq.dir/fsm_stream_reassembler_seq.cc.o -c /home/cs144/sponge/tests/fsm_stream_reassembler_seq.cc
 
 tests/CMakeFiles/fsm_stream_reassembler_seq.dir/fsm_stream_reassembler_seq.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fsm_stream_reassembler_seq.dir/fsm_stream_reassembler_seq.cc.i"
-	cd /home/cs144/sponge/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cs144/sponge/tests/fsm_stream_reassembler_seq.cc > CMakeFiles/fsm_stream_reassembler_seq.dir/fsm_stream_reassembler_seq.cc.i
+	cd /home/cs144/sponge/build/tests && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cs144/sponge/tests/fsm_stream_reassembler_seq.cc > CMakeFiles/fsm_stream_reassembler_seq.dir/fsm_stream_reassembler_seq.cc.i
 
 tests/CMakeFiles/fsm_stream_reassembler_seq.dir/fsm_stream_reassembler_seq.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fsm_stream_reassembler_seq.dir/fsm_stream_reassembler_seq.cc.s"
-	cd /home/cs144/sponge/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cs144/sponge/tests/fsm_stream_reassembler_seq.cc -o CMakeFiles/fsm_stream_reassembler_seq.dir/fsm_stream_reassembler_seq.cc.s
+	cd /home/cs144/sponge/build/tests && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cs144/sponge/tests/fsm_stream_reassembler_seq.cc -o CMakeFiles/fsm_stream_reassembler_seq.dir/fsm_stream_reassembler_seq.cc.s
 
 tests/CMakeFiles/fsm_stream_reassembler_seq.dir/fsm_stream_reassembler_seq.cc.o.requires:
 

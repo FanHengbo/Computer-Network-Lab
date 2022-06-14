@@ -60,15 +60,15 @@ include apps/CMakeFiles/webget.dir/flags.make
 apps/CMakeFiles/webget.dir/webget.cc.o: apps/CMakeFiles/webget.dir/flags.make
 apps/CMakeFiles/webget.dir/webget.cc.o: ../apps/webget.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cs144/sponge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object apps/CMakeFiles/webget.dir/webget.cc.o"
-	cd /home/cs144/sponge/build/apps && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/webget.dir/webget.cc.o -c /home/cs144/sponge/apps/webget.cc
+	cd /home/cs144/sponge/build/apps && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/webget.dir/webget.cc.o -c /home/cs144/sponge/apps/webget.cc
 
 apps/CMakeFiles/webget.dir/webget.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/webget.dir/webget.cc.i"
-	cd /home/cs144/sponge/build/apps && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cs144/sponge/apps/webget.cc > CMakeFiles/webget.dir/webget.cc.i
+	cd /home/cs144/sponge/build/apps && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cs144/sponge/apps/webget.cc > CMakeFiles/webget.dir/webget.cc.i
 
 apps/CMakeFiles/webget.dir/webget.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/webget.dir/webget.cc.s"
-	cd /home/cs144/sponge/build/apps && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cs144/sponge/apps/webget.cc -o CMakeFiles/webget.dir/webget.cc.s
+	cd /home/cs144/sponge/build/apps && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cs144/sponge/apps/webget.cc -o CMakeFiles/webget.dir/webget.cc.s
 
 apps/CMakeFiles/webget.dir/webget.cc.o.requires:
 
