@@ -120,9 +120,9 @@ void TCPSender::tick(const size_t ms_since_last_tick)
         _consecutive_retransmission_count++;
         if (_window_size > 0 || seg.header().syn == true)
         {
-            //Only double RTO when _window_size > 0, because when _window_size == 0, all sending one-byte segment acts like a probe
-            //However, in the case that sender never receive ACK from receiver, we need to retransmit SYN constantly until get a ACK. 
-            //_window_size is also 0 in this circumstance, but we need double the RTO
+            //Only double RTO when _window_size > 0, because when _window_size == 0, all sending one-byte segment acts like a probe.
+            //However, in the case that sender hasn't received any ACK from receiver, we need to retransmit SYN constantly until get a ACK. 
+            //_window_size is also 0 in this circumstance, but we need double the RTO.
             _retransmission_timeout *= 2;
         }
         _timer = 0;
